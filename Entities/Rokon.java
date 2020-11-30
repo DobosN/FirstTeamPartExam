@@ -12,7 +12,7 @@ public class Rokon {
 	}
 	
 	public Rokon(String nev, String cim, String telefonszam) {
-		this.rokonId = rokonId;
+	
 		this.nev = nev;
 		this.cim = cim;
 		this.telefonszam = telefonszam;
