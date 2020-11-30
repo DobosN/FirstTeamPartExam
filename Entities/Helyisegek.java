@@ -1,16 +1,11 @@
 package Entities;
 
-import java.sql.Date;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
-
 
 public class Helyisegek {
 
 	private Integer blokacioId;
 	private Integer szobaszam;
 	private boolean muto;
-
 	
 	public Helyisegek() {
 	}

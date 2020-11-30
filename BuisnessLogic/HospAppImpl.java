@@ -53,6 +53,7 @@ public class HospAppImpl implements HospApp{
 		
 		boolean valiDr = repo.validator("doktor", "dr_id",repo.universalId("dr_id", "doktor", "SzemIgSzám", szemIgSzam));
 		boolean validBeteg= repo.validator("beteg", "beteg_id", repo.universalId("beteg_id", "beteg", "email", email));
+
 		if(valiDr && validBeteg) {
 			repo.betegToDoki(szemIgSzam, email);
 		}else {
