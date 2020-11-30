@@ -1,7 +1,8 @@
 package Entities;
 
-
 import java.sql.Date;
+import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Doktor {
@@ -11,21 +12,36 @@ public class Doktor {
 	private String nev;
 	private String szakkepesites;
 	boolean muthet;
-	private LocalDateTime munkakezdes ;
-	private LocalDateTime munkavege;
-	
+
 	public Doktor() {
-	
+
 	}
-	
-	public Doktor(String szemIgSzam, String nev, String szakkepesites, boolean muthet,
-			LocalDateTime munkakezdes, LocalDateTime munkavege) {
+
+	public Doktor(Integer drId, String szemIgSzam, String nev, String szakkepesites, boolean muthet) {
+		super();
+		this.drId = drId;
 		this.szemIgSzam = szemIgSzam;
 		this.nev = nev;
 		this.szakkepesites = szakkepesites;
 		this.muthet = muthet;
-		this.munkakezdes = munkakezdes;
-		this.munkavege = munkavege;
+	}
+
+	public Doktor(String szemIgSzam, String nev, String szakkepesites, boolean muthet) {
+
+		this.szemIgSzam = szemIgSzam;
+		this.nev = nev;
+		this.szakkepesites = szakkepesites;
+		this.muthet = muthet;
+	}
+
+	public Doktor(String szemIgSzam, String nev, String szakkepesites, boolean muthet, Timestamp munkakezdes,
+			Timestamp munkavege) {
+
+		this.szemIgSzam = szemIgSzam;
+		this.nev = nev;
+		this.szakkepesites = szakkepesites;
+		this.muthet = muthet;
+
 	}
 
 	public Integer getDrId() {
@@ -68,27 +84,10 @@ public class Doktor {
 		this.muthet = muthet;
 	}
 
-	public LocalDateTime getMunkakezdes() {
-		return munkakezdes;
-	}
-
-	public void setMunkakezdes(LocalDateTime munkakezdes) {
-		this.munkakezdes = munkakezdes;
-	}
-
-	public LocalDateTime getMunkavege() {
-		return munkavege;
-	}
-
-	public void setMunkavege(LocalDateTime munkavege) {
-		this.munkavege = munkavege;
-	}
-
 	@Override
 	public String toString() {
-		return "Doktor [drId=" + drId + ", szemIgSzam=" + szemIgSzam + ", nev=" + nev + ", szakkepesites="
-				+ szakkepesites + ", muthet=" + muthet + ", munkakezdes=" + munkakezdes + ", munkavege=" + munkavege
-				+ "]";
+		return "Doktor id " + drId + " szemIgSzam=" + szemIgSzam + ", nev=" + nev + ", szakkepesites=" + szakkepesites
+				+ ", muthet=" + muthet;
 	}
 
 	@Override
@@ -96,8 +95,6 @@ public class Doktor {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((drId == null) ? 0 : drId.hashCode());
-		result = prime * result + ((munkakezdes == null) ? 0 : munkakezdes.hashCode());
-		result = prime * result + ((munkavege == null) ? 0 : munkavege.hashCode());
 		result = prime * result + (muthet ? 1231 : 1237);
 		result = prime * result + ((nev == null) ? 0 : nev.hashCode());
 		result = prime * result + ((szakkepesites == null) ? 0 : szakkepesites.hashCode());
@@ -119,16 +116,6 @@ public class Doktor {
 				return false;
 		} else if (!drId.equals(other.drId))
 			return false;
-		if (munkakezdes == null) {
-			if (other.munkakezdes != null)
-				return false;
-		} else if (!munkakezdes.equals(other.munkakezdes))
-			return false;
-		if (munkavege == null) {
-			if (other.munkavege != null)
-				return false;
-		} else if (!munkavege.equals(other.munkavege))
-			return false;
 		if (muthet != other.muthet)
 			return false;
 		if (nev == null) {
@@ -148,7 +135,5 @@ public class Doktor {
 			return false;
 		return true;
 	}
-	
-	
-	
+
 }
