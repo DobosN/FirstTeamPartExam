@@ -14,46 +14,58 @@ public class Beteg {
 	}
 	
 	public Beteg(String nev, String cim, String telefonszam, String email, String kezeles) {
-		this.betegId = betegId;
+	
 		this.nev = nev;
 		this.cim = cim;
 		this.telefonszam = telefonszam;
 		this.email = email;
 		this.kezeles = kezeles;
 	}
+	
 	public Integer getBetegId() {
 		return betegId;
 	}
+	
 	public void setBetegId(Integer betegId) {
 		this.betegId = betegId;
 	}
+	
 	public String getNev() {
 		return nev;
 	}
+	
 	public void setNev(String nev) {
 		this.nev = nev;
 	}
+	
 	public String getCim() {
 		return cim;
 	}
+	
 	public void setCim(String cim) {
 		this.cim = cim;
 	}
+	
 	public String getTelefonszam() {
 		return telefonszam;
 	}
+	
 	public void setTelefonszam(String telefonszam) {
 		this.telefonszam = telefonszam;
 	}
+	
 	public String getEmail() {
 		return email;
 	}
+	
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	public String getKezeles() {
 		return kezeles;
 	}
+	
 	public void setKezeles(String kezeles) {
 		this.kezeles = kezeles;
 	}

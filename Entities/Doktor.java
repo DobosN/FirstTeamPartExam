@@ -14,6 +14,7 @@ public class Doktor {
 	private LocalDateTime munkakezdes ;
 	private LocalDateTime munkavege;
 	
+	
 	public Doktor() {
 	
 	}

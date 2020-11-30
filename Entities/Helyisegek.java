@@ -1,6 +1,7 @@
 package Entities;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
 
@@ -9,19 +10,18 @@ public class Helyisegek {
 	private Integer blokacioId;
 	private Integer szobaszam;
 	private boolean muto;
-	private LocalDateTime munkakezdes;
-	private LocalDateTime munkavege;
+//	private Timestamp munkakezdes;
+//	private Timestamp munkavege;
 	
 	public Helyisegek() {
 	}
 	
-	public Helyisegek( Integer szobaszam, boolean muto, LocalDateTime munkakezdes,
-			LocalDateTime munkavege) {
-		this.blokacioId = blokacioId;
+	public Helyisegek( Integer szobaszam, boolean muto) {
+		
 		this.szobaszam = szobaszam;
 		this.muto = muto;
-		this.munkakezdes = munkakezdes;
-		this.munkavege = munkavege;
+//		this.munkakezdes = munkakezdes;
+//		this.munkavege = munkavege;
 	}
 
 	public Integer getBlokacioId() {
@@ -48,26 +48,25 @@ public class Helyisegek {
 		this.muto = muto;
 	}
 
-	public LocalDateTime getMunkakezdes() {
-		return munkakezdes;
-	}
-
-	public void setMunkakezdes(LocalDateTime munkakezdes) {
-		this.munkakezdes = munkakezdes;
-	}
-
-	public LocalDateTime getMunkavege() {
-		return munkavege;
-	}
-
-	public void setMunkavege(LocalDateTime munkavege) {
-		this.munkavege = munkavege;
-	}
+//	public Timestamp getMunkakezdes() {
+//		return munkakezdes;
+//	}
+//
+//	public void setMunkakezdes(Timestamp munkakezdes) {
+//		this.munkakezdes = munkakezdes;
+//	}
+//
+//	public Timestamp getMunkavege() {
+//		return munkavege;
+//	}
+//
+//	public void setMunkavege(Timestamp munkavege) {
+//		this.munkavege = munkavege;
+//	}
 
 	@Override
 	public String toString() {
-		return "Helyisegek [blokacioId=" + blokacioId + ", szobaszam=" + szobaszam + ", muto=" + muto + ", munkakezdes="
-				+ munkakezdes + ", munkavege=" + munkavege + "]";
+		return "Helyisegek [blokacioId=" + blokacioId + ", szobaszam=" + szobaszam + ", muto=" + muto;
 	}
 
 	@Override
@@ -75,8 +74,6 @@ public class Helyisegek {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((blokacioId == null) ? 0 : blokacioId.hashCode());
-		result = prime * result + ((munkakezdes == null) ? 0 : munkakezdes.hashCode());
-		result = prime * result + ((munkavege == null) ? 0 : munkavege.hashCode());
 		result = prime * result + (muto ? 1231 : 1237);
 		result = prime * result + ((szobaszam == null) ? 0 : szobaszam.hashCode());
 		return result;
@@ -96,16 +93,6 @@ public class Helyisegek {
 				return false;
 		} else if (!blokacioId.equals(other.blokacioId))
 			return false;
-		if (munkakezdes == null) {
-			if (other.munkakezdes != null)
-				return false;
-		} else if (!munkakezdes.equals(other.munkakezdes))
-			return false;
-		if (munkavege == null) {
-			if (other.munkavege != null)
-				return false;
-		} else if (!munkavege.equals(other.munkavege))
-			return false;
 		if (muto != other.muto)
 			return false;
 		if (szobaszam == null) {
@@ -115,7 +102,6 @@ public class Helyisegek {
 			return false;
 		return true;
 	}
-	
-	
+
 	
 }
