@@ -14,7 +14,7 @@ public class Beteg {
 	}
 	
 	public Beteg(String nev, String cim, String telefonszam, String email, String kezeles) {
-	
+
 		this.nev = nev;
 		this.cim = cim;
 		this.telefonszam = telefonszam;

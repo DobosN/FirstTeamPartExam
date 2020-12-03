@@ -4,25 +4,21 @@ import java.sql.Date;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
 
-
 public class Helyisegek {
 
 	private Integer blokacioId;
 	private Integer szobaszam;
 	private boolean muto;
-//	private Timestamp munkakezdes;
-//	private Timestamp munkavege;
-	
-	public Helyisegek() {
-	}
-	
+
+
 	public Helyisegek( Integer szobaszam, boolean muto) {
 		
 		this.szobaszam = szobaszam;
 		this.muto = muto;
-//		this.munkakezdes = munkakezdes;
-//		this.munkavege = munkavege;
 	}
+	public Helyisegek() {
+	}
+
 
 	public Integer getBlokacioId() {
 		return blokacioId;
@@ -47,22 +43,6 @@ public class Helyisegek {
 	public void setMuto(boolean muto) {
 		this.muto = muto;
 	}
-
-//	public Timestamp getMunkakezdes() {
-//		return munkakezdes;
-//	}
-//
-//	public void setMunkakezdes(Timestamp munkakezdes) {
-//		this.munkakezdes = munkakezdes;
-//	}
-//
-//	public Timestamp getMunkavege() {
-//		return munkavege;
-//	}
-//
-//	public void setMunkavege(Timestamp munkavege) {
-//		this.munkavege = munkavege;
-//	}
 
 	@Override
 	public String toString() {
@@ -103,5 +83,4 @@ public class Helyisegek {
 		return true;
 	}
 
-	
 }
